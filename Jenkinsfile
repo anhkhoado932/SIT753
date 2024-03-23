@@ -25,6 +25,11 @@ pipeline {
                 echo 'Snyk: running security scan'
             }
         }
+        stage('deploy to staging') {
+            steps {
+                echo 'AWS EC2: deploy the application'
+            }
+        }
         stage('integration test on staging') {
             steps {
                 echo 'running integration test on staging'
